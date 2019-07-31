@@ -53,20 +53,24 @@ def func(): #this function moves device with both buttons pressed and moves left
     
 list = [x for x in range(0,500)]
 
-def tea(): #function to lower/raise teabag for x minutes - starts with left button cancels with right button
-    if touchL.pressed():
+def tea(): #function to lower/raise teabag for x minutes
+    if touch2.pressed():
         for x in list:
             
             if x%2==0:
                 holder.run(-200)
                 wait(700)
                 holder.stop()
-            if touchR.pressed():
+                wait(5)
+            if touch3.pressed():
                 break
-            else:
+            if x%2 !=0:
                 holder.run(200)
                 wait(700)
                 holder.stop()  
+                wait(5)
+            
+                    
             
 
 while True:
