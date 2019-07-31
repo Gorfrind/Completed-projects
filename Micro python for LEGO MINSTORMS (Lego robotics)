@@ -53,7 +53,7 @@ def func(): #this function moves device with both buttons pressed and moves left
     
 list = [x for x in range(0,500)]
 
-def tea(): #function to lower/raise teabag for x minutes
+def tea(): #function to lower/raise teabag for 7ms multiplied by max of list
     if touch2.pressed():
         for x in list:
             
