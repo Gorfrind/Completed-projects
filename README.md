@@ -1,5 +1,5 @@
 # Completed-projects
-Download to view
+Download html to view properly
 
 # Basic website
 https://gorfrinds-web-development.weebly.com/
