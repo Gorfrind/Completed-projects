@@ -1,5 +1,8 @@
 #!/usr/bin/env pybricks-micropython
 
+#This project is for an extension I built called holder 
+#This program will raise/lower a tea bag into hot water
+
 from pybricks import ev3brick as brick
 from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
                                  InfraredSensor, UltrasonicSensor, GyroSensor)
