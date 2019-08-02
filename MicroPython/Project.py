@@ -1,5 +1,9 @@
 #!/usr/bin/env pybricks-micropython
 
+#This project is to drive around a robot
+
+#Note There was only 2 TouchSensors/buttons 
+
 from pybricks import ev3brick as brick
 from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
                                  InfraredSensor, UltrasonicSensor, GyroSensor)
@@ -21,7 +25,7 @@ touch3 = TouchSensor(Port.S3)
 
 
 
-def func1():
+def func1(): #commands to drive left/right/forward and to stop given obstruction or drop (e.g. a cliff or step)
     while touch3.pressed() and touch2.pressed():       
         if sensorU.distance() < 50:
             robot.stop()
@@ -56,7 +60,7 @@ def func1():
 
 
 def func2():               
-    if sensorU.distance() < 50 or sensorD.distance() > 150:
+    if sensorU.distance() < 50 or sensorD.distance() > 150: #robot will reverse if stop condition of func1 was met
         while touch3.pressed() and touch2.pressed():
             robot.drive(-100,0) 
     else:
